@@ -80,7 +80,7 @@ class PostController extends Controller
         // $usr_id = $post->user_id;
         $post = \App\Models\Post::findOrFail($id);
 
-        return view('posts.edit',['post' => $post]);
+        return view('posts.edit',['post' => $post],['id' => $id]);
         // return view('posts.edit');
     }
 
